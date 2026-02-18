@@ -3,7 +3,7 @@ provider "aws" {
 }
 
 resource "aws_instance" "example" {
-    ami = "ami-053b0d53c279acc90"
-    instance_type = "t2.micro"
+    ami = var.ami_value
+    instance_type = var.instance_type_value
     associate_public_ip_address = true
 }
